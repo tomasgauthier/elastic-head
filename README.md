@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Diagnóstico de Habilidades Futuras
 
-## Getting Started
+Una herramienta de diagnóstico web basada en el "Future of Jobs Report 2025" del Foro Económico Mundial para ayudar a las personas a identificar sus brechas de habilidades con respecto al futuro del trabajo.
 
-First, run the development server:
+## Características
 
+- Evaluación de las 10 habilidades más relevantes para 2030
+- Interfaz intuitiva y amigable
+- Resultados instantáneos con análisis detallado
+- Recomendaciones personalizadas
+- Almacenamiento seguro de datos con Vercel KV
+- Visualización de datos con gráficos radar
+
+## Tecnologías
+
+- Next.js 14
+- TypeScript
+- Tailwind CSS
+- Vercel KV
+- Chart.js
+- Vercel Analytics
+
+## Configuración del Proyecto
+
+1. Clona el repositorio:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <url-del-repositorio>
+cd elastic-head
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Instala las dependencias:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Configura las variables de entorno:
+- Crea un archivo `.env.local` basado en `.env.example`
+- Añade las credenciales de Vercel KV
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Inicia el servidor de desarrollo:
+```bash
+npm run dev
+```
 
-## Learn More
+5. Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-To learn more about Next.js, take a look at the following resources:
+## Estructura del Proyecto
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+src/
+  ├── app/                    # Páginas de la aplicación
+  │   ├── page.tsx           # Página principal
+  │   ├── assessment/        # Evaluación
+  │   └── results/           # Resultados
+  ├── components/            # Componentes reutilizables
+  ├── data/                  # Datos estáticos
+  │   ├── skills.ts         # Definición de habilidades
+  │   └── questions.ts      # Preguntas del diagnóstico
+  ├── lib/                   # Utilidades y configuraciones
+  │   └── kv.ts             # Cliente de Vercel KV
+  └── types/                 # Definiciones de tipos
+      └── skills.ts         # Tipos relacionados con habilidades
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Despliegue
 
-## Deploy on Vercel
+La aplicación está optimizada para ser desplegada en Vercel:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Conecta tu repositorio con Vercel
+2. Configura las variables de entorno en el dashboard de Vercel
+3. Despliega la aplicación
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Contribuir
+
+Las contribuciones son bienvenidas. Por favor, abre un issue o un pull request para sugerir cambios o mejoras.
+
+## Licencia
+
+MIT
